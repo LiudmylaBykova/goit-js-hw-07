@@ -10,7 +10,6 @@
 // При сабміті форми виведи об'єкт із введеними даними в консоль і очисти значення полів форми методом reset.
 
 const form = document.querySelector(".login-form");
-const input = document.querySelector(".current");
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
@@ -23,11 +22,4 @@ form.addEventListener("submit", (event) => {
   }
   console.log(data);
   event.target.reset();
-});
-
-input.addEventListener("focus", () => {
-  input.value = "Type area";
-});
-input.addEventListener("input", () => {
-  input.value = "";
 });

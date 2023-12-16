@@ -45,13 +45,14 @@ function createBoxes(amount) {
     let width = 30;
     let height = 30;
     for (let i = 0; i < amount; i++) {
-      width += 10;
-      height += 10;
       const color = getRandomHexColor();
       const newBox = `<div style="width: ${width}px; height: ${height}px; background-color: ${color};"></div>`;
       newBoxes.push(newBox);
+      width += 10;
+      height += 10;
     }
     boxes.innerHTML = newBoxes.join("");
+    input.value = "";
   }
 }
 
